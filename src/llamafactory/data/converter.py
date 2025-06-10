@@ -20,6 +20,7 @@ from typing import TYPE_CHECKING, Any, Optional, Union
 from ..extras import logging
 from .data_utils import Role
 
+from .im2svg_converter import Im2SvgConverter
 
 if TYPE_CHECKING:
     from datasets import Dataset, IterableDataset
@@ -230,6 +231,7 @@ class SharegptDatasetConverter(DatasetConverter):
 DATASET_CONVERTERS = {
     "alpaca": AlpacaDatasetConverter,
     "sharegpt": SharegptDatasetConverter,
+    "im2svg": Im2SvgConverter,
 }
 
 
